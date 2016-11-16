@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'돋움',Dotum,Helvetica,sans-serif;font-size:12px}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:underline}
+legend{display:none}
+caption{overflow:hidden;width:1px;height:1px;*height:0;padding:0;margin-top:-1px;font-size:0;line-height:0;text-indent:-999999px}
+table .tblind td,table .tblind th{position:relative;width:auto;height:0;padding:0;margin:0;border:0;font-size:0;line-height:0}
+button{border:0;background:none}
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}

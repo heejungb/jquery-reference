@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀렉터 기본</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+		#fruit{overflow:hidden}
+		#fruit div{width:100px;float:left;text-align:center;line-height:50px;margin-right:10px;font-size:30px}
+		.banana{background-color:#f1c40f}
+		.berry{background-color:#e74c3c}
+		.kiwi{background-color:#2ecc71}
+		.orange{background-color:#e67e22}
+		.grape{background-color:#8e44ad}
+	</style>
+</head>
+<body>
+	<div id="fruit">
+		<div class="banana">바나나</div>
+		<div class="berry">딸기</div>
+		<div class="kiwi">키위</div>
+		<div class="orange">귤</div>
+		<div class="grape">포도</div>
+	</div>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		// console.log($('*'))
+		// console.log($('.banana'))
+		// console.log($('#fruit'))
+		// console.log($('#fruit > div'))
+		// console.log($('.banana','.berry','.kiwi'))
+		// console.log($('.grape','#fruit'))
+		// console.log($('.banana + div'))
+		// console.log($('div'))
+		// console.log($('#fruit .grape'))
+		// console.log($('.banana ~ div'))
+	</script>
+</body>
+</html>

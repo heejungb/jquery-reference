@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀렉터 기타</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+		#fruit{overflow:hidden}
+		li{width:100px;float:left;text-align:center;height:50px;margin-right:10px;font-size:30px;line-height:50px;background:blue}
+		.banana{background-color:#f1c40f}
+		.berry{background-color:#e74c3c}
+		.kiwi{background-color:#2ecc71}
+		.orange{background-color:#e67e22}
+		.grape{background-color:#8e44ad}
+	</style>
+</head>
+<body>
+	<ul id="fruit">
+		<li class="banana">바나나</div>
+		<li class="berry">딸기</div>
+		<li class="kiwi">키위</div>
+		<li class="orange" lang="en">귤</div>
+		<li class="grape">포도</div>
+		<li class="etc"></li>
+		<li class="have"><span></span></li>
+		<li class="apple" style="visibility:hidden">사과</li>
+	</ul>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		console.log($('li:empty'))
+		console.log($('li:parent'))
+		console.log($('li:contains(키위)'))
+		console.log($("li:parent"))
+		console.log($("li:visible"))
+		console.log($("li:hidden"))
+		console.log($("li:has(span)"))
+		console.log($("li:parent")) //텍스트 노드조차도 없는 etc를 제외하고 모두 셀렉트됨
+		console.log($("li:empty")) //텍스트 노드조차도 없는 etc만을 셀렉트함
+	</script>
+</body>
+</html>

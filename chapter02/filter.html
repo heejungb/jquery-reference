@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>셀렉터 필터</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+		#fruit{overflow:hidden}
+		#fruit li{width:100px;float:left;text-align:center;line-height:50px;margin-right:10px;font-size:30px}
+		.banana{background-color:#f1c40f}
+		.berry{background-color:#e74c3c}
+		.kiwi{background-color:#2ecc71}
+		.orange{background-color:#e67e22}
+		.grape{background-color:#8e44ad}
+	</style>
+</head>
+<body>
+	<ul id="fruit">
+		<li class="banana">바나나</div>
+		<li class="berry">딸기</div>
+		<li class="kiwi">키위</div>
+		<li class="orange" lang="en">귤</div>
+		<li class="grape">포도</div>
+	</ul>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		console.log($("li:eq(0)"));
+		console.log($("li:first"));
+		console.log($("li:last"));
+		console.log($("li:odd"));
+		console.log($("li:even"));
+		console.log($("li:gt(2)"));
+		console.log($("li:lt(2)"));
+		console.log($("li:not(.kiwi)"))
+		console.log($("li:lang(en)"))
+		console.log($("li:first-child"));
+		console.log($("li:last-child"));
+		console.log($("li:first-of-type"));
+		console.log($("li:last-of-type"));
+		console.log($("li:nth-child(2)"));
+		console.log($("li:nth-last-child(2)"));
+		console.log($("li:nth-last-of-type(2)"));
+		console.log($("li:nth-of-type(2)"));
+	</script>
+</body>
+</html>

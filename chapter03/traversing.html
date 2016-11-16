@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>dom traversing</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<style>
+	.wrap{background:#34495e;padding:30px;font-size:20px;line-height:30px;text-align:center}
+	.wrap ul{background:#e74c3c;overflow:hidden;padding:20px;margin-bottom:20px}
+	.wrap ul li{background:#f39c12;width:200px;height:30px;float:left;margin-right:10px;}
+	.wrap .etc{background:#3498db;text-align:center;font-size:20px;position:relative;padding:20px}
+	.wrap .etc span{position:absolute;right:10px;top:10px;background:#9b59b6}
+	p{margin:20px 0;background:#bdc3c7}
+	</style>
+</head>
+<body>
+	<!-- http://www.w3schools.com/jquery/jquery_traversing.asp -->
+	<div class="wrap">
+		<ul class="list">
+			<li class="item01">01</li>
+			<li class="item02">02</li>
+			<li class="item03">03</li>
+		</ul>
+		<p class="p_outer">문단</p>
+		<div class="etc">
+			etc
+			<span class="inner">둥둥</span>
+			<p class="p_inner">문단</p>
+		</div>
+	</div>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		console.log($(".wrap").children());
+		console.log($(".list").parent());
+		console.log($("li").parents('ul')); //상위노드부터 검색
+		console.log($("li").closest('ul'));
+		console.log($('.item01').closest('li')); //자기자신까지도 검색
+		console.log($(".inner").parentsUntil('.wrap'));
+		console.log($(".inner").offsetParent());
+		console.log($(".item01").next());
+		console.log($("ul").next(':has(span)'))
+		console.log($(".item01").nextAll());
+		console.log($(".item01").nextUntil('.item03'));
+		console.log($(".etc").prev());
+		console.log($(".item03").prevAll());
+		console.log($(".item02").siblings()); //나빼고 나머지 형제노드 반환
+		console.log($("li").eq(0));
+		console.log($("li").eq(-1))
+		console.log($("li").filter(':even'));
+		console.log($("li").filter(':last'));
+		console.log($("li").not('.item02'));
+		console.log($("li").first());
+		console.log($("li").last());
+		console.log($("div").has('span')) //span 가지고 있는애들 전부다 반환
+		console.log($("li").slice(1,3))
+		console.log($("ul").add("p"))
+		console.log($("ul").add("p",".etc"))
+		console.log($(".wrap").find('p').addBack());
+		console.log($(".wrap").find('ul').find('li').end())
+		console.log($(".wrap").contents())
+		console.log($("ul").children().is('li'))
+	</script>
+</body>
+</html>

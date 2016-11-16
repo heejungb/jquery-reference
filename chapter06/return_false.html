@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Tree</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+	<a href="http://www.naver.com">
+		<div id="div1">
+			<input type="label" id="label1" value="[Click me]"/>
+		</div>
+	</a>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		// only use javascript
+		// document.getElementById('div1').onclick = function() {
+		// 	alert('click div1');
+		// };
+		// document.getElementById('label1').onclick = function(e) {
+		// 	alert('click label1');
+		// 	e.stopPropagation();
+		// 	e.preventDefault();
+		// 	return false;
+		// };
+
+		// use jquery
+		$('#div1').click( function() {
+			alert('click div1');
+		} );
+		$('#label1').click( function(e) {
+			alert('click label1');
+			//e.stopPropagation();
+			// e.preventDefault();
+			// return false;
+		} );
+	</script>
+</body>
+</html>

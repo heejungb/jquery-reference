@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>제어 css</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+		div{
+			width:200px;
+			height:200px;
+			margin:20px;
+			padding:10px;
+			background:#555;
+			font-size:30px;
+			text-align:center;
+			line-height:200px;
+		}
+    </style>
+</head>
+<body>
+	<div class="box">
+		BoxModel
+	</div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+		// get
+		// console.log($('.box').css('width'));
+
+		// set
+		// $('.box').css('background-color','pink');
+
+		//대쉬를 사용하지 않을시 카멜케이스 형식으로 기술
+		// $('.box').css('backgroundColor','#e67e22');
+
+		//여러 속성을 제어할시
+		// $('.box').css({
+		// 	'backgroundColor':'#000',
+		// 	'color':'#fff',
+		// 	'border':'1px solid red',
+		// 	'padding-bottom':'30px'
+		// })
+
+		// get
+		// console.log($('.box').width())
+		// console.log($('.box').height())
+		// console.log($('.box').innerWidth())
+		// console.log($('.box').innerHeight())
+		// console.log($('.box').outerWidth(true))
+		// console.log($('.box').outerHeight(true))
+
+		// set
+		// $('.box').width(100)
+		// $('.box').height(100)
+		// $('.box').innerWidth(300)
+		$('.box').outerWidth(300,true)
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Tree</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        div{width:100px;height:100px;background-color:#eee;font-size:20px;line-height:100px;text-align:center;margin:20px auto}
+        .box{border:1px solid #000}
+        .red{background:red}
+        .green{background:green}
+        .blue{background:blue}
+        .circle{border-radius:50%}
+
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+		// $('div').addClass('red')
+        // $('div').addClass('green')
+        // $('div').addClass('blue')
+        // $('div').addClass('circle')
+        // $('div').removeClass('box')
+		$('div').toggleClass('box')
+	</script>
+</body>
+</html>

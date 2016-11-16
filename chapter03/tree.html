@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Tree</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+    .area{background:#2C3E50;padding:20px;margin-bottom:10px;font-size:20px;}
+    .city>li{background:#FDE3A7;margin-bottom:20px;padding:10px}
+    .town>li{background:#E67E22;margin-top:5px;height:30px;line-height:30px;text-align:center}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="area">
+            <ul class="city">
+                <li class="seoul">서울특별시
+                    <ul class="town">
+                        <li>강동구</li>
+                        <li>강남구</li>
+                        <li>송파구</li>
+                    </ul>
+                </li>
+                <li class="seongnam">경기도
+                    <ul class="town">
+                        <li>성남시</li>
+                        <li>광주시</li>
+                        <li>용인시</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		console.log($(".wrap").children())
+        console.log($(".seoul").children().children())
+	</script>
+</body>
+</html>

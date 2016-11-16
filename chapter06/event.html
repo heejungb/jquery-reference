@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>상태 이벤트</title>
+	<style>
+		body{height:3000px}
+	</style>
+</head>
+<body>
+	<img src="http://adcreative.naver.com/ad3/1004/1004874/1_3845.jpg" alt="이미지">
+	<form>
+		<input type="text" value="ttt">
+		<input type="submit">
+	</form>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			console.log("문서 준비 완료");
+		});
+		$('img').on('load',function(){
+			console.log('이미지로드완료')
+		})
+		// $(window).on('load',function(){
+		// 	console.log('윈도우로드완료')
+		// })
+		// $("input[type='text']")
+		// 	.select(function() {
+		// 		console.log("대상 선택됨");
+		// 	})
+		// 	.change(function() {
+		// 		console.log("대상 변경됨");
+		// 	});
+		// $("form").submit(function(e) {
+		// 	e.preventDefault();
+		// 	console.log("전송");
+		// });
+		// $(window).resize(function() {
+		// 	console.log("리사이즈");
+		// });
+		// $(window).scroll(function() {
+		// 	console.log("스크롤");
+		// });
+	</script>
+</body>
+</html>

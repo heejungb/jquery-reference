@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Tree</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        div{background-color:rgba(0,0,0,0.2);border-bottom:1px solid #000;padding:10px}
+    </style>
+</head>
+<body>
+	<img src="img/test.png" alt="이미지설명텍스트" width="200" height="200">
+    <div>
+        <a href="#container" class="link" title="링크" target="_blank">본문바로가기</a>
+    </div>
+    <div>
+        <input type="checkbox" id="chk">
+        <label for="chk">동의</label>
+    </div>
+    <div>
+        <input type="text" class="ipt" value="이름">
+    </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script>
+		console.log($("img").attr('alt'));
+		console.log($("img").attr('alt','새로운설명'))
+        console.log($(".link").attr('href'))
+        console.log($(".link").removeAttr('href'))
+        console.log($(".link").prop('href'))
+        console.log($(".link").removeProp('href'))
+        $('#chk').change(function(){
+            console.log($("input").attr("checked"))
+            console.log($("input").prop("checked"))
+        })
+        console.log($(".ipt").val())
+	</script>
+</body>
+</html>

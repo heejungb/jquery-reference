@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+	button{width:50px;height:30px;background:#000;color:#fff}
+        div{width:100px;height:100px;background-color:#eee;font-size:20px;line-height:100px;text-align:center;margin:20px auto}
+    </style>
+</head>
+<body>
+	<button type="button">left</button>
+    <div class="box">box</div>
+	<div class="box2">box2</div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+	// $('.box').animate({
+	// 	'width':'500px'
+	// },3000,"easeInElastic",function(){
+	// 	alert('으악')
+	// })
+	// $('.box').delay(1000).animate({
+	// 		'opacity':'0.5',
+	// 		'fontSize':'30px',
+	// 		'width':'500px'
+	// },700,function(){
+	// 	$(this).css('backgroundColor','red')
+	// })
+	//
+	// $('.box2').delay(3000).animate({
+	// 		'opacity':'0.5',
+	// 		'fontSize':'30px',
+	// 		'width':'500px'
+	// },700,function(){
+	// 	$(this).css('backgroundColor','red')
+	// })
+	$('button').on('click',function(){
+		$('.box').stop().animate({'margin-left':'+=100px'})
+	})
+
+	</script>
+</body>
+</html>
