@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <style>
 	button{width:50px;height:30px;background:#000;color:#fff}
-        div{width:100px;height:100px;background-color:#eee;font-size:20px;line-height:100px;text-align:center;margin:20px auto}
+        div{width:100px;height:100px;background-color:#eee;font-size:20px;line-height:100px;text-align:center;margin:20px 0}
     </style>
 </head>
 <body>
@@ -38,6 +38,7 @@
 	// })
 	$('button').on('click',function(){
 		$('.box').stop().animate({'margin-left':'+=100px'})
+        $('.box2').animate({'margin-left':'+=100px'})
 	})
 
 	</script>
